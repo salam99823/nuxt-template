@@ -20,4 +20,13 @@ export default defineNuxtConfig({
       pathPrefix: true,
     },
   ],
+  app: {
+    head: {
+      titleTemplate: "%s %separator %siteName",
+      templateParams: {
+        separator: "—",
+        siteName: "",
+      },
+    },
+  },
 });
