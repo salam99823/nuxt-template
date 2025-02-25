@@ -8,14 +8,21 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
-    "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/fonts",
+    "@pinia/nuxt",
     "@nuxt/eslint",
     "@vueuse/nuxt",
+    "@nuxthub/core",
   ],
   tailwindcss: {
     exposeConfig: true,
+  },
+  pinia: {
+    storesDirs: ["~/stores/**"],
+  },
+  imports: {
+    dirs: ["stores"],
   },
   components: [
     {
