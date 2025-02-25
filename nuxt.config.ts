@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   modules: [
+    "@sidebase/nuxt-auth",
     "@nuxt/content",
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
@@ -10,6 +11,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/fonts",
+    "@vueuse/nuxt",
   ],
   tailwindcss: {
     exposeConfig: true,
@@ -20,12 +22,29 @@ export default defineNuxtConfig({
       pathPrefix: true,
     },
   ],
+  auth: {
+    isEnabled: true,
+    baseURL: process.env.NUXT_AUTH_ORIGIN,
+    provider: {
+      type: "authjs",
+      trustHost: false,
+      defaultProvider: "google",
+      addDefaultCallbackUrl: true,
+    },
+  },
   app: {
     head: {
       titleTemplate: "%s %separator %siteName",
       templateParams: {
-        separator: "—",
         siteName: "",
+        separator: "-",
+      },
+    },
+  },
+  runtimeConfig: {
+    authOrigin: process.env.NUXT_AUTH_ORIGIN,
+    auth: {
+      secret: process.env.NUXT_AUTH_SECRET,
       },
     },
   },
