@@ -53,6 +53,17 @@ export default defineNuxtConfig({
     authOrigin: process.env.NUXT_AUTH_ORIGIN,
     auth: {
       secret: process.env.NUXT_AUTH_SECRET,
+      google: {
+        id: process.env.NUXT_AUTH_GOOGLE_ID,
+        secret: process.env.NUXT_AUTH_GOOGLE_SECRET,
+      },
+      vk: {
+        id: process.env.NUXT_AUTH_VK_ID,
+        secret: process.env.NUXT_AUTH_VK_SECRET,
+      },
+      yandex: {
+        id: process.env.NUXT_AUTH_YANDEX_ID,
+        secret: process.env.NUXT_AUTH_YANDEX_SECRET,
       },
     },
   },
