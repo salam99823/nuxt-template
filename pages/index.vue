@@ -1,11 +1,12 @@
-<script setup>
-definePageMeta({
-  title: "",
+<script setup lang="ts">
+useHead({
+  title: useAppConfig().siteName,
+  titleTemplate: "",
 });
 </script>
 
 <template>
-  <main></main>
+  <main />
 </template>
 
-<style lang="postcss" scoped></style>
+<style></style>
