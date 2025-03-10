@@ -29,6 +29,3 @@ jobs:
 
       - name: Deploy to NuxtHub
         uses: nuxt-hub/action@v1
-        id: deploy
-        with:
-          project-key: nuxt-template-ogxs
