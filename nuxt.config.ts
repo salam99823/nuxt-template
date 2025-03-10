@@ -15,6 +15,13 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxthub/core",
   ],
+  nitro: {
+    preset: "cloudflare-pages",
+  },
+  hub: {
+    database: true,
+    cache: true,
+  },
   tailwindcss: {
     exposeConfig: true,
   },
