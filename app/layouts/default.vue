@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col justify-center items-center">
     <LayoutHeader />
     <slot />
     <LayoutFooter />

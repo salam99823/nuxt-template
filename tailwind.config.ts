@@ -1,5 +1,5 @@
-import type { Config } from "tailwindcss";
-import typography from "@tailwindcss/typography";
+import type { Config } from 'tailwindcss'
+import typography from '@tailwindcss/typography'
 
 export default <Partial<Config>>{
   content: [],
@@ -8,4 +8,4 @@ export default <Partial<Config>>{
   },
   variants: {},
   plugins: [typography()],
-};
+}
