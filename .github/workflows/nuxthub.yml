@@ -24,7 +24,7 @@ jobs:
       - name: Ensure NuxtHub module is installed
         run: bunx nuxthub@latest ensure
 
-      - name: Ensure NuxtHub module is installed
+      - name: Generate pnpm lock file
         run: bunx pnpm@latest install --lockfile-only
 
       - name: Build application
