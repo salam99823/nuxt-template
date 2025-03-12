@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: "%s %separator %siteName",
       templateParams: {
-        siteName: "",
+        siteName: "template",
         separator: "-",
       },
     },
